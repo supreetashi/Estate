@@ -1,0 +1,19 @@
+.h-wrapper {
+    background: black;
+}
+
+.h-wrapper a {
+    text-decoration: none;
+    color: white;
+}
+
+.h-container {
+    justify-content: space-between;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.h-menu {
+    gap: 2rem;
+}
