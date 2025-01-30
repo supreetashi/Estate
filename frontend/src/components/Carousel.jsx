@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "../assets/styles/Carousel.css";
 
 const Carousel = ({ items }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -13,43 +14,28 @@ const Carousel = ({ items }) => {
   };
 
   return (
-    <div style={styles.carousel}>
-      <button onClick={prevSlide} style={styles.button}>❮</button>
-      <div style={styles.slide}>
+    
+    <div class="carousel" >
+      <div class="text">
+        <span>Best Choices</span>
+        <span>Popular Residencies</span>
+      </div>
+      <div className="slide-container">
+      <button onClick={prevSlide} class="button">❮</button>
+      <div class="slide">
         <img
           src={items[currentIndex].image}
           alt={items[currentIndex].title}
-          style={styles.image}
+          class="image"
         />
         <h3>{items[currentIndex].title}</h3>
       </div>
-      <button onClick={nextSlide} style={styles.button}>❯</button>
+      <button onClick={nextSlide} class="button">❯</button>
+      </div>
+      
     </div>
   );
 };
 
-const styles = {
-  carousel: {
-    display: "flex",
-    alignItems: "center",
-    gap: "10px",
-  },
-  slide: {
-    textAlign: "center",
-  },
-  image: {
-    width: "300px",
-    height: "150px",
-    objectFit: "cover",
-  },
-  button: {
-    backgroundColor: "#333",
-    color: "#fff",
-    border: "none",
-    padding: "5px 10px",
-    cursor: "pointer",
-    borderRadius: "4px",
-  },
-};
 
 export default Carousel;

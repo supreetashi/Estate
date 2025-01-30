@@ -1,0 +1,12 @@
+.companies {
+    display: flex;
+    justify-content: space-around;
+    padding: 32px 32px;
+}
+
+.companies img {
+    height: 103px;
+    width: auto;
+    object-fit: contain;
+    width: 150px;
+}

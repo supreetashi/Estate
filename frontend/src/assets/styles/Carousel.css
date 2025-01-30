@@ -1,0 +1,33 @@
+.text {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+.carousel {
+    background-color: blue;
+    padding: 32px 32px;
+    display: flex;
+    flex-direction: column;
+}
+
+.slide {
+    text-align: center;
+}
+
+.image {
+    width: 300px;
+    height: 150px;
+    object-fit: cover;
+}
+
+.button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+;

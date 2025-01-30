@@ -5,6 +5,7 @@ import HeroSection from "../components/HeroSection";
 import property1 from "../assets/images/property1.jpg";
 import property2 from "../assets/images/property2.jpg";
 import "../assets/styles/HeroSection.css";
+import Companies from "../components/Companies";
 
 const properties = [
   { image: property1, title: "House 1", description: "Beautiful house", price: "$500,000" },
@@ -13,9 +14,9 @@ const properties = [
 
 const LandingPage = () => {
   return (
-    <div class="landing-page">
+    <div>
       <HeroSection />
-      <h1>Welcome to RealEstatePro</h1>
+      <Companies/>
       <Carousel items={properties} />
       <div>
         {properties.map((property, index) => (
