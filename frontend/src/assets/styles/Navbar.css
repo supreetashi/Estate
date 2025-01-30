@@ -1,0 +1,33 @@
+button {
+    color: #fff;
+    background-color: blue;
+    font-family: poppins, sans-serif;
+    border-radius: 5px;
+    padding: 5px 10px;
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+    min-width: 100px;
+}
+
+button:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+.logo img {
+    width: 100px;
+    height: 38px;
+    margin-right: 10px;
+    object-fit: contain;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    width: 580px;
+    height: 40px;
+    background-color: #000;
+    color: #fff;
+}
