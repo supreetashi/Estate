@@ -20,6 +20,7 @@
 .hero-title {
     display: flex;
     font-size: 3.8rem;
+    font-weight: 600;
     font-family: poppins, sans-serif;
     z-index: 1;
     align-items: center;

@@ -8,8 +8,15 @@ import "../assets/styles/HeroSection.css";
 import Companies from "../components/Companies";
 
 const properties = [
-  { image: property1, title: "House 1", description: "Beautiful house", price: "$500,000" },
-  { image: property2, title: "House 2", description: "Modern apartment", price: "$350,000" },
+  { image: property1, title: "Asati Garden City", description: "Beautiful house", price: "$500,000" },
+  { image: property2, title: "Citralan Puri Serang", description: "Modern apartment", price: "$350,000" },
+  { image: property1, title: "Aliva Priva Jardin", description: "Beautiful house", price: "$500,000" },
+  { image: property2, title: "Baigan Villa", description: "Modern apartment", price: "$350,000" },
+  { image: property1, title: "Byankyanke Villa", description: "Beautiful house", price: "$500,000" },
+  { image: property1, title: "Kajoor Villa", description: "Beautiful house", price: "$500,000" },
+  { image: property2, title: "Bukk Villa", description: "Modern apartment", price: "$350,000" },
+  { image: property1, title: "A Tu Jaare", description: "Beautiful house", price: "$500,000" },
+
 ];
 
 const LandingPage = () => {

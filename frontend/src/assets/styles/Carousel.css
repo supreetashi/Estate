@@ -1,33 +1,102 @@
-.text {
+.carousel {
+    padding: 32px 9rem;
     display: flex;
     flex-direction: column;
-    margin: 0;
+    gap: 20px;
+    overflow: hidden;
+    width: 100vw;
+    /* Full width */
 }
 
-.carousel {
-    background-color: blue;
-    padding: 32px 32px;
+.orange-text {
+    color: orange;
+    font-weight: 600;
+    font-size: 24px;
+}
+
+.normal-text {
+    color: #1f3e72;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 60px;
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
+}
+
+.slide-wrapper {
+    overflow: hidden;
+    position: relative;
+    display: flex;
+}
+
+.slide-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    /* Allows sliding */
 }
 
 .slide {
+    flex: 0 0 calc(90vw / 4);
+    /* Updated for 4 images */
     text-align: center;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    height: 330px;
+    justify-content: space-between;
 }
 
 .image {
-    width: 300px;
-    height: 150px;
+    width: 226px;
+    height: 170px;
     object-fit: cover;
+    border-radius: 10px;
 }
 
-.button {
-    background-color: #333;
-    color: #fff;
-    border: none;
-    padding: 5px 10px;
+.price {
+    color: #1f3e72;
+    font-size: 18px;
+    font-weight: bold;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 5px;
+    display: flex;
+    width: 193px;
+}
+
+.primaryText {
+    display: flex;
+    font-size: 24px;
+    color: #1f3e72;
+    font-weight: 600;
+}
+
+.secondText {
+    display: flex;
+    justify-content: flex-start;
+    /* Aligns the text to the start */
+    align-items: flex-start;
+    /* Vertically aligns the text at the top */
+}
+
+
+/* Navigation buttons */
+
+.slide-button {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.prev-button,
+.next-button {
+    background-color: white;
+    color: blue;
+    padding: 10px 15px;
+    box-shadow: 0 5px 5px black;
     cursor: pointer;
-    border-radius: 4px;
+    font-size: 18px;
+    border: none;
+    margin: 0 10px;
+    min-width: 40px;
+    height: 40px;
 }
-
-;
