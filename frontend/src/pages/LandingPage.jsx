@@ -1,11 +1,13 @@
 import React from "react";
 import Carousel from "../components/Carousel";
-import PropertyCard from "../components/PropertyCard";
+import Value from "../components/Value";
 import HeroSection from "../components/HeroSection";
 import property1 from "../assets/images/property1.jpg";
 import property2 from "../assets/images/property2.jpg";
 import "../assets/styles/HeroSection.css";
 import Companies from "../components/Companies";
+import Contact  from "../components/Contact";
+import GetStarted  from "../components/GetStarted";
 
 const properties = [
   { image: property1, title: "Asati Garden City", description: "Beautiful house", price: "$500,000" },
@@ -25,11 +27,9 @@ const LandingPage = () => {
       <HeroSection />
       <Companies/>
       <Carousel items={properties} />
-      <div>
-        {properties.map((property, index) => (
-          <PropertyCard key={index} property={property} />
-        ))}
-      </div>
+      <Value/>
+      <Contact/>
+      <GetStarted/>
     </div>
   );
 };
