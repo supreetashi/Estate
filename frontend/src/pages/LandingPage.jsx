@@ -1,38 +1,38 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Carousel from "../components/Carousel";
 import Value from "../components/Value";
 import HeroSection from "../components/HeroSection";
-import property1 from "../assets/images/property1.jpg";
-import property2 from "../assets/images/property2.jpg";
-import "../assets/styles/HeroSection.css";
 import Companies from "../components/Companies";
-import Contact  from "../components/Contact";
-import GetStarted  from "../components/GetStarted";
-
-const properties = [
-  { image: property1, title: "Asati Garden City", description: "Beautiful house", price: "$500,000" },
-  { image: property2, title: "Citralan Puri Serang", description: "Modern apartment", price: "$350,000" },
-  { image: property1, title: "Aliva Priva Jardin", description: "Beautiful house", price: "$500,000" },
-  { image: property2, title: "Baigan Villa", description: "Modern apartment", price: "$350,000" },
-  { image: property1, title: "Byankyanke Villa", description: "Beautiful house", price: "$500,000" },
-  { image: property1, title: "Kajoor Villa", description: "Beautiful house", price: "$500,000" },
-  { image: property2, title: "Bukk Villa", description: "Modern apartment", price: "$350,000" },
-  { image: property1, title: "A Tu Jaare", description: "Beautiful house", price: "$500,000" },
-
-];
+import Contact from "../components/Contact";
+import GetStarted from "../components/GetStarted";
+import axios from "axios";
 
 const LandingPage = () => {
+  const [properties, setProperties] = useState([]);
+
+  useEffect(() => {
+    const fetchProperties = async () => {
+      try {
+        const response = await axios.get("http://localhost:5000/api/properties"); // Update with your backend API URL
+        setProperties(response.data); // Assuming the response is an array of property objects
+      } catch (error) {
+        console.error("Error fetching properties:", error);
+      }
+    };
+
+    fetchProperties();
+  }, []);
+
   return (
     <div>
       <HeroSection />
-      <Companies/>
+      <Companies />
       <Carousel items={properties} />
-      <Value/>
-      <Contact/>
-      <GetStarted/>
+      <Value />
+      <Contact />
+      <GetStarted />
     </div>
   );
 };
-
 
 export default LandingPage;
