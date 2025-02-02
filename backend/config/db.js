@@ -1,22 +1,17 @@
-const mysql = require('mysql2');
+const { Pool } = require('pg');
 const dotenv = require('dotenv');
 
 // Load environment variables
 dotenv.config();
 
-const pool = mysql.createPool({
-    host: process.env.DB_HOST,
-    port: process.env.DB_PORT,
-    user: process.env.DB_USER,
-    password: process.env.DB_PASSWORD,
-    database: process.env.DB_NAME,
-    waitForConnections: true,
-    connectionLimit: 10,
-    queueLimit: 0,
+const pool = new Pool({
+    connectionString: process.env.DATABASE_URL,
+    ssl: {
+        rejectUnauthorized: false, // Required for cloud-based PostgreSQL like Supabase
+    },
 });
 
-console.log(process.env.DB_HOST, process.env.DB_USER, process.env.DB_PASSWORD, process.env.DB_NAME);
-
+console.log("Connected to PostgreSQL Database");
 
 // Export the pool
-module.exports = pool.promise();
+module.exports = pool;
