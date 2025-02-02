@@ -9,8 +9,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@supabase/supabase-js": "^2.48.1",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
-    "mysql2": "^3.12.0"
+    "formidable": "^3.5.2",
+    "mysql2": "^3.12.0",
+    "pg": "^8.13.1"
   }
 }
