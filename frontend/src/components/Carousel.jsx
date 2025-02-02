@@ -1,8 +1,5 @@
 import React, { useState } from "react";
 import "../assets/styles/Carousel.css";
-import property1 from "../assets/images/property1.jpg";
-import property2 from "../assets/images/property2.jpg";
-
 
 const Carousel = ({ items }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -23,30 +20,37 @@ const Carousel = ({ items }) => {
     <div className="carousel">
       <span>
         <div className="orange-text">Best Choices</div>
-          <div className="normal-text">Popular Residencies
-            <div className="slide-button">
-              <button onClick={prevSlide} className="prev-button">❮</button>
-              <button onClick={nextSlide} className="next-button">❯</button>
-            </div>
+        <div className="normal-text">
+          Popular Residencies
+          <div className="slide-button">
+            <button onClick={prevSlide} className="prev-button">
+              ❮
+            </button>
+            <button onClick={nextSlide} className="next-button">
+              ❯
+            </button>
           </div>
-
+        </div>
       </span>
       <div className="slide-wrapper">
         <div
           className="slide-container"
-          style={{ transform: `translateX(-${currentIndex * (100 / 4)}vw)` }} // Updated for 4 images
+          style={{ transform: `translateX(-${currentIndex * (100 / 4)}vw)` }}
         >
-          {items.map((item, index) => (
-            <div className="slide" key={index}>
-              <img src={item.image} alt={item.title} className="image" />
-              <span className="price">{item.price}</span>
-              <span className="primaryText">{item.title}</span>
-              <span className="secondText">Lorem ipsum dolor sit amet <br /> consectetur yugu uiej uydh</span>
-            </div>
-            ))}
-          </div>
+          {items.length > 0 ? (
+            items.map((item, index) => (
+              <div className="slide" key={index}>
+                <img src={item.image} alt={item.title} className="image" />
+                <span className="price">{item.price}</span>
+                <span className="primaryText">{item.title}</span>
+                <span className="secondText">{item.description}</span>
+              </div>
+            ))
+          ) : (
+            <p>Loading properties...</p>
+          )}
+        </div>
       </div>
-      
     </div>
   );
 };
