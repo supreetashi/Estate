@@ -1,23 +1,23 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "../assets/styles/Navbar.css";
 import logo from "../assets/images/logo.png";
 
 const Navbar = () => {
   return (
     <nav style={styles.navbar}>
-      <div class="logo" style={styles.logo}>
-        <img src={logo} alt="" />
+      <div className="logo" style={styles.logo}>
+        <img src={logo} alt="Logo" />
       </div>
-          <div class="menu">
-            <ul style={styles.navLinks}>
-              <li><a style={styles.a} href="/">Residences</a></li>
-              <li><a style={styles.a} href="/residences">Our Value</a></li>
-              <li><a style={styles.a} href="/about">Contact Us</a></li>
-              <li><a style={styles.a} href="/about">About Us</a></li>
-              <li><button href="/contact">Contact</button></li>
-            </ul>
-          </div>
-      
+      <div className="menu">
+        <ul style={styles.navLinks}>
+          <li><Link style={styles.a} to="/">Home</Link></li>
+          <li><Link style={styles.a} to="/residences">Residences</Link></li>
+          <li><Link style={styles.a} to="/about">About Us</Link></li>
+          <li><Link style={styles.a} to="/contact">Contact Us</Link></li>
+          <li><button><Link style={styles.a} to="/contact">Contact</Link></button></li>
+        </ul>
+      </div>
     </nav>
   );
 };
@@ -30,7 +30,7 @@ const styles = {
     padding: "10px 20px",
     backgroundColor: "#000",
     color: "#fff",
-    padding: "16px 145px",
+    // padding: "16px 145px",
   },
   logo: {
     fontSize: "1.5rem",

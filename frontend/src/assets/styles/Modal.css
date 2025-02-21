@@ -1,0 +1,176 @@
+/* Modal Overlay: Dark transparent background */
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+
+/* Modal Box */
+
+.modal-content {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 500px;
+    min-height: 400px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    position: relative;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    /* Elegant font */
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+
+/* Modal Close Button (Square & Fixed in Right Corner) */
+
+.modal-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(145deg, #e74c3c, #c0392b);
+    /* Gradient for depth */
+    color: white;
+    border: none;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    /* Slightly rounded edges */
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3), -3px -3px 8px rgba(255, 255, 255, 0.2);
+    /* 3D Shadow */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease-in-out;
+}
+
+
+/* Hover Effect (Pressed Effect) */
+
+.modal-close:hover {
+    background: linear-gradient(145deg, #c0392b, #a93226);
+    box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.3), inset -2px -2px 5px rgba(255, 255, 255, 0.2);
+    transform: translateY(2px);
+}
+
+
+/* Click Effect */
+
+.modal-close:active {
+    box-shadow: inset 4px 4px 6px rgba(0, 0, 0, 0.4), inset -4px -4px 6px rgba(255, 255, 255, 0.2);
+    transform: translateY(4px);
+}
+
+
+/* Modal Image */
+
+.modal-image {
+    width: 100%;
+    max-height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Modal Title */
+
+.modal-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+
+/* Location & Price */
+
+.modal-location,
+.modal-price {
+    font-size: 18px;
+    font-weight: 500;
+    color: #555;
+    margin: 5px 0;
+}
+
+
+/* Highlight Price */
+
+.modal-price {
+    color: #27ae60;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+
+/* Property Description */
+
+.modal-description {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.5;
+    margin: 10px 0;
+    font-style: italic;
+}
+
+
+/* Category */
+
+.modal-category {
+    font-size: 14px;
+    color: #888;
+    font-weight: 500;
+}
+
+
+/* Separator */
+
+hr {
+    margin: 15px 0;
+    border: 0.5px solid #ddd;
+}
+
+
+/* Owner Details */
+
+.modal-owner-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-top: 10px;
+}
+
+.modal-owner,
+.modal-contact {
+    font-size: 16px;
+    color: #444;
+    font-weight: 500;
+}
+
+
+/* Animation */
+
+@keyframes fadeIn {
+    from {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}

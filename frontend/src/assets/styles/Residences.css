@@ -1,0 +1,15 @@
+.residences-container {
+    padding: 20px;
+}
+
+.residences-title {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.residences-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
